@@ -32,8 +32,8 @@ def download_file(file_id, file_name):
     download_file(file_id, file_name)
     """
     response = requests.get(file(file_id))
-    with open(file_name, "wb") as file:
-        file.write(response.content)
+    with open(file_name, "wb") as f:
+        f.write(response.content)
     return file_name
 
 
